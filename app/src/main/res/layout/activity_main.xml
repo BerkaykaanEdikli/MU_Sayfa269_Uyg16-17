@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_Ana"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView_YemekSecim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#090909"
+        android:gravity="center"
+        android:text="Yemek Seçimi"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_YemekSecimi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_YemekSecim">
+
+        <CheckBox
+            android:id="@+id/checkBox_Kahvalti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kahvaltı" />
+
+        <CheckBox
+            android:id="@+id/checkBox_Ogle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Öğle Yemeği" />
+
+        <CheckBox
+            android:id="@+id/checkBox_Aksam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Akşam Yemeği" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_Baglanti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#D6CDCD"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_YemekSecimi">
+
+        <TextView
+            android:id="@+id/textView_BaglantiSecim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#090909"
+            android:gravity="center"
+            android:text="Bağlantı Seçimi"
+            android:textColor="#EFEAEA"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch_Wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:minHeight="48dp"
+            android:text="Wifi Bağlantısı"
+            android:textColor="#850408"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch_Bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:minHeight="48dp"
+            android:text="Bluetooth Bağlantısı"
+            android:textColor="#850408"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch_Aridrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:minHeight="48dp"
+            android:text="AirDrop Bağlantısı"
+            android:textColor="#850408"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_Alt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_Baglanti">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_GununMenusu"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_GununMenusu">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_Pazartesi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pazartesi" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_Sali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salı" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_Carsamba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Çarşamba" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <Button
+            android:id="@+id/button_Onayla"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/checkbox_on_background"
+            android:text="Onayla"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
